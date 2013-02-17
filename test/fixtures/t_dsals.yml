@@ -1,0 +1,51 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: t_dsals
+#
+#  id                                :integer(4)      not null, primary key
+#  tan                               :string(255)
+#  employerOrDeductorOrCollecterName :string(255)
+#  addrDetail                        :string(255)
+#  cityOrTownOrDistrict              :string(255)
+#  pinCode                           :integer(4)
+#  stateCode                         :string(255)
+#  incChrgSal                        :decimal(16, 2)
+#  deductUnderChapVIA                :decimal(16, 2)
+#  taxPayIncluSurchEdnCes            :decimal(16, 2)
+#  totalTDSSal                       :decimal(16, 2)
+#  taxPayRefund                      :decimal(16, 2)
+#  TaxPaidAndRefund_id               :integer(4)
+#  created_at                        :datetime
+#  updated_at                        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tan: MyString
+  employerOrDeductorOrCollecterName: MyString
+  addrDetail: MyString
+  cityOrTownOrDistrict: MyString
+  pinCode: 1
+  stateCode: MyString
+  incChrgSal: 1.5
+  deductUnderChapVIA: 1.5
+  taxPayIncluSurchEdnCes: 1.5
+  totalTDSSal: 1.5
+  taxPayRefund: 1.5
+  TaxPaidAndRefund_id: 1
+
+two:
+  tan: MyString
+  employerOrDeductorOrCollecterName: MyString
+  addrDetail: MyString
+  cityOrTownOrDistrict: MyString
+  pinCode: 1
+  stateCode: MyString
+  incChrgSal: 1.5
+  deductUnderChapVIA: 1.5
+  taxPayIncluSurchEdnCes: 1.5
+  totalTDSSal: 1.5
+  taxPayRefund: 1.5
+  TaxPaidAndRefund_id: 1

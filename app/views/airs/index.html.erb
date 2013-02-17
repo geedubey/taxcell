@@ -1,0 +1,42 @@
+<% if @airs.any? %>
+<h1>Listing airs</h1>
+
+<table>
+  <tr>
+    <th>Code001</th>
+    <th>Code002</th>
+    <th>Code003</th>
+    <th>Code004</th>
+    <th>Code005</th>
+    <th>Code006</th>
+    <th>Code007</th>
+    <th>Code008</th>
+    <th>Taxexmpintinc</th>
+<!--    <th>Form</th> -->
+  </tr>
+
+<% for air in @airs %>
+  <tr>
+    <td><%=h air.code001 %></td>
+    <td><%=h air.code002 %></td>
+    <td><%=h air.code003 %></td>
+    <td><%=h air.code004 %></td>
+    <td><%=h air.code005 %></td>
+    <td><%=h air.code006 %></td>
+    <td><%=h air.code007 %></td>
+    <td><%=h air.code008 %></td>
+    <td><%=h air.taxExmpIntInc %></td>
+<!--    <td><%=h air.form_id %></td> -->
+    <td><%= link_to 'Show', air %></td>
+    <td><%= link_to 'Edit', edit_air_path(air) %></td>
+    <td><%= link_to 'Destroy', air, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added AIR information yet for this form . </p>
+<%end%>
+
+<br />
+
+<%= link_to 'Add now', new_air_path %>

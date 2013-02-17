@@ -1,0 +1,39 @@
+<p>
+  <b>Desigofficerwardorcircle:</b>
+  <%=h @filing_info.desigOfficerWardorCircle %>
+</p>
+
+<p>
+  <b>Returnfilesec1:</b>
+  <%=h filing_section %>
+</p>
+
+<p>
+  <b>Returntype1:</b>  
+  <%=h filing_type %>
+</p>
+
+<p>
+  <b>Origretfiledate:</b>
+  <%=h @filing_info.origRetFileDate %>
+</p>
+
+<p>
+  <b>Receiptno:</b>
+  <%=h @filing_info.receiptNo %>
+</p>
+
+<p>
+  <b>Residentialstatus1:</b>
+  <%=h residential_status %>
+</p>
+
+<!-- 
+<p>
+  <b>Form:</b>
+  <%=h @filing_info.form_id %>
+</p>
+-->
+
+<%= link_to 'Edit', edit_filing_info_path(@filing_info) %> |
+<%= link_to 'Back', filing_infos_path %>

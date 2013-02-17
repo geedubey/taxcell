@@ -1,0 +1,72 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: personal_infos
+#
+#  id                   :integer(4)      not null, primary key
+#  firstName            :string(255)
+#  middleName           :string(255)
+#  surNameOrOrgName     :string(255)
+#  pan                  :string(255)
+#  residenceName        :string(255)
+#  residenceNo          :string(255)
+#  status               :string(255)
+#  localityOrArea       :string(255)
+#  roadOrStreet         :string(255)
+#  dob                  :date
+#  cityOrTownOrDistrict :string(255)
+#  gender1              :string(255)
+#  pinCode              :integer(4)
+#  stateCode1           :integer(4)
+#  emailAddress         :string(255)
+#  employerCategory1    :integer(4)
+#  phoneNo              :integer(4)
+#  stdCode              :integer(4)
+#  form_id              :integer(4)
+#  created_at           :datetime
+#  updated_at           :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  firstName: MyString
+  middleName: MyString
+  surNameOrOrgName: MyString
+  pan: MyString
+  residenceName: MyString
+  residenceNo: MyString
+  status: MyString
+  localityOrArea: MyString
+  roadOrStreet: MyString
+  dob: 2009-05-12
+  cityOrTownOrDistrict: MyString
+  gender1: MyString
+  pinCode: 1
+  stateCode1: 1
+  emailAddress: MyString
+  employerCategory1: 1
+  phoneNo: 1
+  stdCode: 1
+  form_id: 1
+
+two:
+  firstName: MyString
+  middleName: MyString
+  surNameOrOrgName: MyString
+  pan: MyString
+  residenceName: MyString
+  residenceNo: MyString
+  status: MyString
+  localityOrArea: MyString
+  roadOrStreet: MyString
+  dob: 2009-05-12
+  cityOrTownOrDistrict: MyString
+  gender1: MyString
+  pinCode: 1
+  stateCode1: 1
+  emailAddress: MyString
+  employerCategory1: 1
+  phoneNo: 1
+  stdCode: 1
+  form_id: 1

@@ -1,0 +1,38 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: tax_computations
+#
+#  id                    :integer(4)      not null, primary key
+#  section89             :decimal(16, 2)
+#  section90and91        :decimal(16, 2)
+#  taxDueToDelay         :decimal(16, 2)
+#  taxOnAggregateInc     :decimal(16, 2)
+#  totalTaxPayable       :decimal(16, 2)
+#  surchargeOnTaxPayable :decimal(16, 2)
+#  educationCess         :decimal(16, 2)
+#  netTaxLiability       :decimal(16, 2)
+#  grossTaxLiability     :decimal(16, 2)
+#  totalIntrstPay        :decimal(16, 2)
+#  totTaxPlusIntrstPay   :decimal(16, 2)
+#  intrstPayUs234A       :decimal(16, 2)
+#  intrstPayUs234B       :decimal(16, 2)
+#  intrstPayUs234C       :decimal(16, 2)
+#  form_id               :integer(4)
+#  created_at            :datetime
+#  updated_at            :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  section89: 1.5
+  section90and91: 1.5
+  taxDueToDelay: 1.5
+  form_id: 1
+
+two:
+  section89: 1.5
+  section90and91: 1.5
+  taxDueToDelay: 1.5
+  form_id: 1

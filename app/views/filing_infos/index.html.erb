@@ -1,0 +1,36 @@
+<% if @filing_infos.any? %>
+<h1>Listing filing_infos</h1>
+
+<table>
+  <tr>
+    <th>Desigofficerwardorcircle</th>
+    <th>Returnfilesec1</th>
+    <th>Returntype1</th>
+    <th>Origretfiledate</th>
+    <th>Receiptno</th>
+    <th>Residentialstatus1</th>
+<!--    <th>Form</th> -->
+  </tr>
+
+<% for filing_info in @filing_infos %>
+  <tr>
+    <td><%=h filing_info.desigOfficerWardorCircle %></td>
+    <td><%=h filing_info.returnFileSec1 %></td>
+    <td><%=h filing_info.returnType1 %></td>
+    <td><%=h filing_info.origRetFileDate %></td>
+    <td><%=h filing_info.receiptNo %></td>
+    <td><%=h filing_info.residentialStatus1 %></td>
+<!--    <td><%=h filing_info.form_id %></td> -->
+    <td><%= link_to 'Show', filing_info %></td>
+    <td><%= link_to 'Edit', edit_filing_info_path(filing_info) %></td>
+    <td><%= link_to 'Destroy', filing_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added Filing Information yet for this form . </p>
+<%end%>
+
+<br />
+
+<%= link_to 'New filing_info', new_filing_info_path %>

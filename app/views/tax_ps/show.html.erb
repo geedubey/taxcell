@@ -1,0 +1,39 @@
+<p>
+  <b>Nameofbank:</b>
+  <%=h @tax_p.nameOfBank %>
+</p>
+
+<p>
+  <b>Nameofbranch:</b>
+  <%=h @tax_p.nameOfBranch %>
+</p>
+
+<p>
+  <b>Bsrcode:</b>
+  <%=h @tax_p.bsrCode %>
+</p>
+
+<p>
+  <b>Datedep:</b>
+  <%=h @tax_p.dateDep %>
+</p>
+
+<p>
+  <b>Srlnoofchaln:</b>
+  <%=h @tax_p.srlNoOfChaln %>
+</p>
+
+<p>
+  <b>Amt:</b>
+  <%=h @tax_p.amt %>
+</p>
+<!--
+<p>
+  <b>Taxpaidandrefund:</b>
+  <%=h @tax_p.tax_paid_and_refund_id %>
+</p>
+-->
+
+
+<%= link_to 'Edit', edit_tax_p_path(@tax_p) %> |
+<%= link_to 'Back', tax_ps_path %>

@@ -1,0 +1,59 @@
+<% if @personal_infos.any? %>
+<h1>Listing personal_infos</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Middlename</th>
+    <th>Surnameororgname</th>
+    <th>Pan</th>
+    <th>Residencename</th>
+    <th>Residenceno</th>
+    <th>Status</th>
+    <th>Localityorarea</th>
+    <th>Roadorstreet</th>
+    <th>Dob</th>
+    <th>Cityortownordistrict</th>
+    <th>Gender1</th>
+    <th>Pincode</th>
+    <th>Statecode1</th>
+    <th>Emailaddress</th>
+    <th>Employercategory1</th>
+    <th>Phoneno</th>
+    <th>Stdcode</th>
+<!--    <th>Form</th> -->
+  </tr>
+
+<% for personal_info in @personal_infos %>
+  <tr>
+    <td><%=h personal_info.firstName %></td>
+    <td><%=h personal_info.middleName %></td>
+    <td><%=h personal_info.surNameOrOrgName %></td>
+    <td><%=h personal_info.pan %></td>
+    <td><%=h personal_info.residenceName %></td>
+    <td><%=h personal_info.residenceNo %></td>
+    <td><%=h personal_info.status %></td>
+    <td><%=h personal_info.localityOrArea %></td>
+    <td><%=h personal_info.roadOrStreet %></td>
+    <td><%=h personal_info.dob %></td>
+    <td><%=h personal_info.cityOrTownOrDistrict %></td>
+    <td><%=h personal_info.gender1 %></td>
+    <td><%=h personal_info.pinCode %></td>
+    <td><%=h personal_info.stateCode1 %></td>
+    <td><%=h personal_info.emailAddress %></td>
+    <td><%=h personal_info.employerCategory1 %></td>
+    <td><%=h personal_info.phoneNo %></td>
+    <td><%=h personal_info.stdCode %></td>
+<!--    <td><%=h personal_info.form_id %></td> -->
+    <td><%= link_to 'Show', personal_info %></td>
+    <td><%= link_to 'Edit', edit_personal_info_path(personal_info) %></td>
+    <td><%= link_to 'Destroy', personal_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added personal information yet for this form. </p>
+<%end%>
+<br />
+
+<%= link_to 'New personal_info', new_personal_info_path %>

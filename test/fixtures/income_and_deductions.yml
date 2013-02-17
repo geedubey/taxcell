@@ -1,0 +1,71 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: income_and_deductions
+#
+#  id                     :integer(4)      not null, primary key
+#  incomeFromSal          :decimal(16, 2)
+#  famPension             :decimal(16, 2)
+#  indInterest            :decimal(16, 2)
+#  incomeFromOS           :decimal(16, 2)
+#  grossTotIncome         :decimal(16, 2)
+#  totalChapVIADeductions :decimal(16, 2)
+#  totalIncome            :decimal(16, 2)
+#  aggregateIncome        :decimal(16, 2)
+#  section80C             :decimal(16, 2)
+#  section80CCC           :decimal(16, 2)
+#  section80CCD           :decimal(16, 2)
+#  section80D             :decimal(16, 2)
+#  section80DD            :decimal(16, 2)
+#  section80DDB           :decimal(16, 2)
+#  section80E             :decimal(16, 2)
+#  section80G             :decimal(16, 2)
+#  section80GG            :decimal(16, 2)
+#  section80GGA           :decimal(16, 2)
+#  section80GGC           :decimal(16, 2)
+#  section80U             :decimal(16, 2)
+#  netAgriculturalIncome  :decimal(16, 2)
+#  form_id                :integer(4)
+#  created_at             :datetime
+#  updated_at             :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  incomeFromSal: 1.5
+  famPension: 1.5
+  indInterest: 1.5
+  section80C: 1.5
+  section80CCC: 1.5
+  section80CCD: 1.5
+  section80D: 1.5
+  section80DD: 1.5
+  section80DDB: 1.5
+  section80E: 1.5
+  section80G: 1.5
+  section80GG: 1.5
+  section80GGA: 1.5
+  section80GGC: 1.5
+  section80U: 1.5
+  netAgriculturalIncome: 1.5
+  form_id: 1
+
+two:
+  incomeFromSal: 1.5
+  famPension: 1.5
+  indInterest: 1.5
+  section80C: 1.5
+  section80CCC: 1.5
+  section80CCD: 1.5
+  section80D: 1.5
+  section80DD: 1.5
+  section80DDB: 1.5
+  section80E: 1.5
+  section80G: 1.5
+  section80GG: 1.5
+  section80GGA: 1.5
+  section80GGC: 1.5
+  section80U: 1.5
+  netAgriculturalIncome: 1.5
+  form_id: 1

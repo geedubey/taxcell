@@ -1,0 +1,54 @@
+<h1>New air</h1>
+
+<% form_for(@air) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :code001 %><br />
+    <%= f.text_field :code001 %>
+  </p>
+  <p>
+    <%= f.label :code002 %><br />
+    <%= f.text_field :code002 %>
+  </p>
+  <p>
+    <%= f.label :code003 %><br />
+    <%= f.text_field :code003 %>
+  </p>
+  <p>
+    <%= f.label :code004 %><br />
+    <%= f.text_field :code004 %>
+  </p>
+  <p>
+    <%= f.label :code005 %><br />
+    <%= f.text_field :code005 %>
+  </p>
+  <p>
+    <%= f.label :code006 %><br />
+    <%= f.text_field :code006 %>
+  </p>
+  <p>
+    <%= f.label :code007 %><br />
+    <%= f.text_field :code007 %>
+  </p>
+  <p>
+    <%= f.label :code008 %><br />
+    <%= f.text_field :code008 %>
+  </p>
+  <p>
+    <%= f.label :taxExmpIntInc %><br />
+    <%= f.text_field :taxExmpIntInc %>
+  </p>
+<!--
+ 
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+-->
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', airs_path %>

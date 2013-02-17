@@ -1,0 +1,42 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: tax_paid_and_refunds
+#
+#  id                :integer(4)      not null, primary key
+#  totalTaxesPaid    :decimal(16, 2)
+#  balTaxPayable     :decimal(16, 2)
+#  refundDue         :decimal(16, 2)
+#  advanceTax        :decimal(16, 2)
+#  tds               :decimal(16, 2)
+#  selfAssessmentTax :decimal(16, 2)
+#  bankAccountNumber :string(255)
+#  ecsRequired       :string(255)
+#  bankAccountType   :string(255)
+#  micrCode          :string(255)
+#  form_id           :integer(4)
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  advanceTax: 1.5
+  tds: 1.5
+  selfAssessmentTax: 1.5
+  bankAccountNumber: MyString
+  ecsRequired: MyString
+  bankAccountType: MyString
+  micrCode: MyString
+  form_id: 1
+
+two:
+  advanceTax: 1.5
+  tds: 1.5
+  selfAssessmentTax: 1.5
+  bankAccountNumber: MyString
+  ecsRequired: MyString
+  bankAccountType: MyString
+  micrCode: MyString
+  form_id: 1

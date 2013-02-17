@@ -1,0 +1,44 @@
+<p>
+  <b>Advancetax:</b>
+  <%=h @tax_paid_and_refund.advanceTax %>
+</p>
+
+<p>
+  <b>Tds:</b>
+  <%=h @tax_paid_and_refund.tds %>
+</p>
+
+<p>
+  <b>Selfassessmenttax:</b>
+  <%=h @tax_paid_and_refund.selfAssessmentTax %>
+</p>
+
+<p>
+  <b>Bankaccountnumber:</b>
+  <%=h @tax_paid_and_refund.bankAccountNumber %>
+</p>
+
+<p>
+  <b>Ecsrequired:</b>
+  <%=h @tax_paid_and_refund.ecsRequired %>
+</p>
+
+<p>
+  <b>Bankaccounttype:</b>
+  <%=h @tax_paid_and_refund.bankAccountType %>
+</p>
+
+<p>
+  <b>Micrcode:</b>
+  <%=h @tax_paid_and_refund.micrCode %>
+</p>
+<!-- 
+<p>
+  <b>Form:</b>
+  <%=h @tax_paid_and_refund.form_id %>
+</p>
+-->
+
+
+<%= link_to 'Edit', edit_tax_paid_and_refund_path(@tax_paid_and_refund) %> |
+<%= link_to 'Back', tax_paid_and_refunds_path %>

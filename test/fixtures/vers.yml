@@ -1,0 +1,39 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: vers
+#
+#  id                    :integer(4)      not null, primary key
+#  assesseeVerName       :string(255)
+#  fatherName            :string(255)
+#  place                 :string(255)
+#  date                  :date
+#  identificationNoOfTRP :string(255)
+#  nameOfTRP             :string(255)
+#  reImbFrmGov           :decimal(16, 2)
+#  form_id               :integer(4)
+#  created_at            :datetime
+#  updated_at            :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  assesseeVerName: MyString
+  fatherName: MyString
+  place: MyString
+  date: 2009-05-12
+  identificationNoOfTRP: MyString
+  nameOfTRP: MyString
+  reImbFrmGov: 1.5
+  form_id: 1
+
+two:
+  assesseeVerName: MyString
+  fatherName: MyString
+  place: MyString
+  date: 2009-05-12
+  identificationNoOfTRP: MyString
+  nameOfTRP: MyString
+  reImbFrmGov: 1.5
+  form_id: 1

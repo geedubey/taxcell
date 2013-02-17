@@ -1,0 +1,44 @@
+<h1>Editing tax_p</h1>
+
+<% form_for(@tax_p) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nameOfBank %><br />
+    <%= f.text_field :nameOfBank %>
+  </p>
+  <p>
+    <%= f.label :nameOfBranch %><br />
+    <%= f.text_field :nameOfBranch %>
+  </p>
+  <p>
+    <%= f.label :bsrCode %><br />
+    <%= f.text_field :bsrCode %>
+  </p>
+  <p>
+    <%= f.label :dateDep %><br />
+    <%= f.date_select :dateDep ,
+		:order => [:day, :month, :year]%>
+  </p>
+  <p>
+    <%= f.label :srlNoOfChaln %><br />
+    <%= f.text_field :srlNoOfChaln %>
+  </p>
+  <p>
+    <%= f.label :amt %><br />
+    <%= f.text_field :amt %>
+  </p>
+  <!-- 
+  <p>
+    <%= f.label :TaxPaidAndRefund_id %><br />
+    <%= f.text_field :tax_paid_and_refund_id %>
+  </p>
+  -->
+  <p>
+    <%= f.submit "Save & Continue" %>
+  </p>
+<% end %>
+<!--
+<%= link_to 'Show', @tax_p %> |
+<%= link_to 'Back', tax_ps_path %>
+-->

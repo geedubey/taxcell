@@ -1,0 +1,74 @@
+<h1>New tax_p</h1>
+<% form_for(@tax_p) do |f| %>
+</td>
+<%= f.error_messages %>
+<table id="cart">
+    <tbody id="line_items">
+        <tr>
+        <td style="width: 20%">
+            <%= f.label :nameOfBank %>
+        </td>
+        <td>
+            <%= f.text_field :nameOfBank %>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :nameOfBranch %>
+            </td>
+            <td>
+                <%= f.text_field :nameOfBranch %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :bsrCode %>
+            </td>
+            <td>
+                <%= f.text_field :bsrCode %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :dateDep %>
+            </td>
+            <td>
+                <%= f.date_select :dateDep ,
+                :order => [:day, :month, :year] %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :srlNoOfChaln %>
+            </td>
+            <td>
+                <%= f.text_field :srlNoOfChaln %>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :amt %>
+            </td>
+            <td>
+                <%= f.text_field :amt %>
+            </td>
+        </tr>
+        <!--
+        <tr>
+        <tr>  <%= f.label :TaxPaidAndRefund_id %> </td>
+        <tr>  <%= f.text_field :tax_paid_and_refund_id %> </td>
+        </tr>
+        -->
+        <tr>
+            <td>
+                <%= f.submit "Create" %>
+            </td>
+        </tr>
+        <% end %>
+        <tr>
+            <td>
+                <%= link_to 'Back', tax_ps_path %>
+            </td>
+        </tr>
+    </tbody>
+</table>

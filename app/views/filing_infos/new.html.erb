@@ -1,0 +1,49 @@
+<h1>New filing_info</h1>
+<% form_for(@filing_info) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :desigOfficerWardorCircle %><br />
+    <%= f.text_field :desigOfficerWardorCircle %>
+  </p>
+  <p>
+    <%= f.label :returnFileSec1 %><br />
+    <%= f.select :returnFileSec1,
+		FilingInfo::RETURNFILE_SECTIONS,
+		:prompt => "Select a Filing Section" %>
+  </p>
+  <p>
+    <%= f.label :returnType1 %><br />
+    <%= f.select :returnType1,
+		FilingInfo::FILING_TYPES,
+		:prompt => "Select a Return Type" %>
+  </p>
+  <p>
+    <%= f.label :origRetFileDate %><br />
+    <%= f.date_select :origRetFileDate, 
+		:order => [:day, :month, :year],
+		:start_year => 2008 %>
+  </p>
+  <p>
+    <%= f.label :receiptNo %><br />
+    <%= f.text_field :receiptNo %>
+  </p>
+  <p>
+    <%= f.label :residentialStatus1 %><br />
+    <%= f.select :residentialStatus1,
+		FilingInfo::RESIDENTIAL_STATUS,
+		:prompt => "Select a Residential Status" %>
+  </p>
+  
+<!--
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+-->
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', filing_infos_path %>

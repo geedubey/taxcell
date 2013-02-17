@@ -1,0 +1,38 @@
+<% if @tax_paid_and_refunds.any? %>
+<h1>Listing tax_paid_and_refunds</h1>
+
+<table>
+  <tr>
+    <th>Advancetax</th>
+    <th>Tds</th>
+    <th>Selfassessmenttax</th>
+    <th>Bankaccountnumber</th>
+    <th>Ecsrequired</th>
+    <th>Bankaccounttype</th>
+    <th>Micrcode</th>
+<!--     <th>Form</th> -->
+  </tr>
+
+<% for tax_paid_and_refund in @tax_paid_and_refunds %>
+  <tr>
+    <td><%=h tax_paid_and_refund.advanceTax %></td>
+    <td><%=h tax_paid_and_refund.tds %></td>
+    <td><%=h tax_paid_and_refund.selfAssessmentTax %></td>
+    <td><%=h tax_paid_and_refund.bankAccountNumber %></td>
+    <td><%=h tax_paid_and_refund.ecsRequired %></td>
+    <td><%=h tax_paid_and_refund.bankAccountType %></td>
+    <td><%=h tax_paid_and_refund.micrCode %></td>
+<!--    <td><%=h tax_paid_and_refund.form_id %></td> -->
+    <td><%= link_to 'Show', tax_paid_and_refund %></td>
+    <td><%= link_to 'Edit', edit_tax_paid_and_refund_path(tax_paid_and_refund) %></td>
+    <td><%= link_to 'Destroy', tax_paid_and_refund, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added Tax paid and Refund information yet for this form . </p>
+<%end%>
+
+<br />
+
+<%= link_to 'New tax_paid_and_refund', new_tax_paid_and_refund_path %>

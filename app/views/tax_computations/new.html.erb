@@ -1,0 +1,87 @@
+<h1>New tax_computation</h1>
+
+<% form_for(@tax_computation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :taxOnAggregateInc %><br />
+    <%= f.text_field :taxOnAggregateInc %>
+  </p>
+  <p>
+    <%= f.label :rebateOnAgriInc %><br />
+    <%= f.text_field :rebateOnAgriInc %>
+  </p>
+  
+  <p>
+    <%= f.label :totalTaxPayable %><br />
+    <%= f.text_field :totalTaxPayable %>
+  </p>
+  
+  <p>
+    <%= f.label :surchargeOnTaxPayable %><br />
+    <%= f.text_field :surchargeOnTaxPayable %>
+  </p>
+  
+  <p>
+    <%= f.label :educationCess %><br />
+    <%= f.text_field :educationCess %>
+  </p>
+  
+  <p>
+    <%= f.label :grossTaxLiability %><br />
+    <%= f.text_field :grossTaxLiability %>
+  </p>
+  
+  <p>
+    <%= f.label :section89 %><br />
+    <%= f.text_field :section89 %>
+  </p>
+  <p>
+    <%= f.label :section90and91 %><br />
+    <%= f.text_field :section90and91 %>
+  </p>
+  
+  <p>
+    <%= f.label :netTaxLiability %><br />
+    <%= f.text_field :netTaxLiability %>
+  </p>
+  
+  <p>
+    <%= f.label :intrstPayUs234A %><br />
+    <%= f.text_field :intrstPayUs234A %>
+  </p>
+  
+  <p>
+    <%= f.label :intrstPayUs234B %><br />
+    <%= f.text_field :intrstPayUs234B %>
+  </p>
+  
+  <p>
+    <%= f.label :intrstPayUs234C %><br />
+    <%= f.text_field :intrstPayUs234C %>
+  </p>
+  
+  <p>
+    <%= f.label :totalIntrstPay %><br />
+    <%= f.text_field :totalIntrstPay %>
+  </p>
+  
+  
+  <p>
+    <%= f.label :totTaxPlusIntrstPay %><br />
+    <%= f.text_field :totTaxPlusIntrstPay %>
+  </p>
+  
+
+<!--
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+-->
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', tax_computations_path %>

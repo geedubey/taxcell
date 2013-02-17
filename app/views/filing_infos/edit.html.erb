@@ -1,0 +1,120 @@
+<h1>Enter Tax filing information</h1>
+<% form_for(@filing_info) do |f| %>
+<%= f.error_messages %>
+<table id="cart">
+    <tbody id="line_items">
+        <tr class="">
+            <td style="width: 20%">
+                <%= f.label :desigOfficerWardorCircle , "Ward or Circle" %>
+            </td>
+            <td>
+                <%= f.text_field :desigOfficerWardorCircle %>
+            </td>
+            <td style="width: 40%">
+                <div class="help notice">
+                    <h4>Enter the assessing officer's ward or circle where the return is to be filed . To find out your assessing officer for filing Income Tax return, Please visit <a href=http://www.incometaxindia.gov.in/ao/firstlevel.asp> Ward/Circle Guide</a> </h4>
+                </div>
+            </td>
+        </tr>
+        <tr class="">
+            <td>
+                <%= f.label :returnFileSec1 , "Return filed under section" %>
+                <br/>
+            </td>
+            <td>
+                <%= f.select :returnFileSec1,
+                FilingInfo::RETURNFILE_SECTIONS,
+                :prompt => "Select a Filing Section" %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Select from list provided. Usually would be 11
+                        <br/>
+                        Select 11 - If Voluntarily before the due date
+                        <br/>
+                        Select 12 - if Voluntarily before the due date
+                        <br/>
+                        Select 13 -In response to notice under section 142(1)
+                        <br/>
+                        Select 14 -In response to notice under section 148
+                        <br/>
+                        Select 15 -In response to notice under section 153A
+                    </h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :returnType1 , "Return Type" %>
+            </td>
+            <td>
+                <%= f.select :returnType1,
+                FilingInfo::FILING_TYPES,
+                :prompt => "Select a Return Type" %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>If this is the only Return you are filing this year then select 'Original' if you have already filed your return for 
+                        this year and would like to make changes then select 'Revised' </h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :origRetFileDate , "Original Return File Date" %>
+            </td>
+            <td>
+                <%= f.date_select :origRetFileDate,
+                :order => [:day, :month, :year],
+                :start_year => 2008 %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Original return File Date, only need to mention if it's a revised return </h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :receiptNo , "Receipt Number" %>
+            </td>
+            <td>
+                <%= f.text_field :receiptNo %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Original return File Receipt number, only need to mention if it's a revised return</h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <%= f.label :residentialStatus1 , "Residential Status" %>
+            </td>
+            <td>
+                <%= f.select :residentialStatus1,
+                FilingInfo::RESIDENTIAL_STATUS,
+                :prompt => "Select a Residential Status" %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Usually would be 'RES'. Know your Residential Status Now Link </h4>
+                </div>
+            </td>
+        </tr>
+        <!--
+        <p>
+        <%= f.label :form_id %><br />
+        <%= f.text_field :form_id %>
+        </p>
+        -->
+        <tr>
+            <td>
+                <%= f.submit "Save & Continue" %>
+            </td>
+        </tr>
+        <% end %>
+        <!--
+        <%= link_to 'Show', @filing_info %> |
+        <%= link_to 'Back', filing_infos_path %>
+        -->

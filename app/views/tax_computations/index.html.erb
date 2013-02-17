@@ -1,0 +1,30 @@
+<% if @tax_computations.any? %>
+<h1>Listing tax_computations</h1>
+
+<table>
+  <tr>
+    <th>Section89</th>
+    <th>Section90and91</th>
+    <th>Taxduetodelay</th>
+<!--     <th>Form</th> -->
+  </tr>
+
+<% for tax_computation in @tax_computations %>
+  <tr>
+    <td><%=h tax_computation.section89 %></td>
+    <td><%=h tax_computation.section90and91 %></td>
+    <td><%=h tax_computation.taxDueToDelay %></td>
+<!--    <td><%=h tax_computation.form_id %></td> -->
+    <td><%= link_to 'Show', tax_computation %></td>
+    <td><%= link_to 'Edit', edit_tax_computation_path(tax_computation) %></td>
+    <td><%= link_to 'Destroy', tax_computation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added Tax Computation information yet for this form . </p>
+<%end%>
+
+<br />
+
+<%= link_to 'New tax_computation', new_tax_computation_path %>

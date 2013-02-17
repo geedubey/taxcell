@@ -1,0 +1,64 @@
+<% if @t_dsals.any? %>
+<h1>Listing t_dsals</h1>
+
+<table>
+  <tr>
+  	<!--
+    <th>Tan</th>
+	-->
+    <th>Employer Name</th>
+	<!--
+    <th>Addrdetail</th>
+    <th>Cityortownordistrict</th>
+    <th>Pincode</th>
+    <th>Statecode</th>
+    <th>Incchrgsal</th>
+    <th>Deductunderchapvia</th>
+    <th>Taxpayinclusurchednces</th>
+    <th>Totaltdssal</th>
+    <th>Taxpayrefund</th>
+    <th>Taxpaidandrefund</th> -->
+  </tr>
+
+<% for t_dsal in @t_dsals %>
+  <tr>
+  	<!--
+    <td><%=h t_dsal.tan %></td>
+	-->
+    <td><%=h t_dsal.employerOrDeductorOrCollecterName %></td>
+	<!--
+    <td><%=h t_dsal.addrDetail %></td>
+    <td><%=h t_dsal.cityOrTownOrDistrict %></td>
+    <td><%=h t_dsal.pinCode %></td>
+    <td><%=h t_dsal.stateCode %></td>
+    <td><%=h t_dsal.incChrgSal %></td>
+    <td><%=h t_dsal.deductUnderChapVIA %></td>
+    <td><%=h t_dsal.taxPayIncluSurchEdnCes %></td>
+    <td><%=h t_dsal.totalTDSSal %></td>
+    <td><%=h t_dsal.taxPayRefund %></td>
+	<td><%=h t_dsal.tax_paid_and_refund_id %></td> 
+	
+    <td><%= link_to 'Show', t_dsal %></td>
+	-->
+    <td><%= link_to 'Edit', edit_t_dsal_path(t_dsal) %></td>
+    <td><%= link_to 'Destroy', t_dsal, :confirm => 'Are you sure, you want to delete this company information ?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<% else %>
+	<p> 
+	Here, you add your company details. Details required here are usually given by the company in Form-16.
+	You can add more than one company information also if you have worked for multiple companies. 
+	But we will be printing only the first two companies in the PDF Form, because standard form doesn't 
+	have scope for more than two companies. 
+	
+	Add the company details by clicking on the Add Employer Info. 
+	Once you are finished, click on to Proceed button to move to next section.
+	</p>
+<%end%>
+
+<br />
+
+<%= button_to "Add Employer" , {:controller =>'t_dsals' , :action => 'new'}, :method =>:get %>
+<%= button_to "I am done! proceed to next section", { :controller=> "t_dsoths", :action => "index" }, :method => :get %>

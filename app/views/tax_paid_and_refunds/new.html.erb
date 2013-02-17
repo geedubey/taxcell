@@ -1,0 +1,68 @@
+<h1>New tax_paid_and_refund</h1>
+
+<% form_for(@tax_paid_and_refund) do |f| %>
+  <%= f.error_messages %>
+<p>
+    <%= f.label :advanceTax %><br />
+    <%= f.text_field :advanceTax %>
+  </p>
+  <p>
+    <%= f.label :tds %><br />
+    <%= f.text_field :tds %>
+  </p>
+  <p>
+    <%= f.label :selfAssessmentTax %><br />
+    <%= f.text_field :selfAssessmentTax %>
+  </p>
+  
+  <p>
+    <%= f.label :totalTaxesPaid %><br />
+    <%= f.text_field :totalTaxesPaid %>
+  </p>
+  
+  <p>
+    <%= f.label :balTaxPayable %><br />
+    <%= f.text_field :balTaxPayable %>
+  </p>
+  
+  <p>
+    <%= f.label :refundDue %><br />
+    <%= f.text_field :refundDue %>
+  </p>  
+  
+  <p>
+    <%= f.label :bankAccountNumber %><br />
+    <%= f.text_field :bankAccountNumber %>
+  </p>
+  
+  <p>
+    <%= f.label :ecsRequired %><br />
+    <%= f.select :ecsRequired, 
+			Form::ECS_REQD,
+				:propmt => "ECS required" %>
+  </p>
+  
+  <p>
+    <%= f.label :bankAccountType %><br />
+    <%= f.select :bankAccountType,
+		Form::ACCOUNT_TYPE,
+		:propmt => "Select Account Type" %>
+  </p>
+  
+  <p>
+    <%= f.label :micrCode %><br />
+    <%= f.text_field :micrCode %>
+  </p>
+  
+<!--
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+-->
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', tax_paid_and_refunds_path %>

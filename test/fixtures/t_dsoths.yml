@@ -1,0 +1,50 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: t_dsoths
+#
+#  id                                :integer(4)      not null, primary key
+#  tan                               :string(255)
+#  employerOrDeductorOrCollecterName :string(255)
+#  addrDetail                        :string(255)
+#  cityOrTownOrDistrict              :string(255)
+#  pinCode                           :integer(4)
+#  stateCode                         :string(255)
+#  amtPaid                           :decimal(16, 2)
+#  datePayCred                       :date
+#  totTDSOnAmtPaid                   :decimal(16, 2)
+#  claimOutOfTotTDSOnAmtPaid         :decimal(16, 2)
+#  TaxPaidAndRefund_id               :integer(4)
+#  created_at                        :datetime
+#  updated_at                        :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tan: MyString
+  employerOrDeductorOrCollecterName: MyString
+  addrDetail: MyString
+  cityOrTownOrDistrict: MyString
+  pinCode: 1
+  stateCode: MyString
+  incChrgSal: 1.5
+  amtPaid: 1.5
+  datePayCred: 2009-05-12
+  totTDSOnAmtPaid: 1.5
+  claimOutOfTotTDSOnAmtPaid: 1.5
+  TaxPaidAndRefund_id: 1
+
+two:
+  tan: MyString
+  employerOrDeductorOrCollecterName: MyString
+  addrDetail: MyString
+  cityOrTownOrDistrict: MyString
+  pinCode: 1
+  stateCode: MyString
+  incChrgSal: 1.5
+  amtPaid: 1.5
+  datePayCred: 2009-05-12
+  totTDSOnAmtPaid: 1.5
+  claimOutOfTotTDSOnAmtPaid: 1.5
+  TaxPaidAndRefund_id: 1

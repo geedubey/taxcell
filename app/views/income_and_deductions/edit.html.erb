@@ -1,0 +1,188 @@
+<h1> Income And Deductions</h1>
+<% form_for(@income_and_deduction) do |f| %>
+<%= f.error_messages %>
+<table id="cart">
+    <tbody id="line_items">
+    <tr class="">
+        <td style="width: 20%">
+            <%= f.label :incomeFromSal %>
+        </td>
+        <td>
+            <%= f.text_field :incomeFromSal %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :famPension %>
+        </td>
+        <td>
+            <%= f.text_field :famPension %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :indInterest %>
+        </td>
+        <td>
+            <%= f.text_field :indInterest %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :incomeFromOS %>
+        </td>
+        <td>
+            <%= f.text_field :incomeFromOS %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :grossTotIncome %>
+        </td>
+        <td>
+            <%= f.text_field :grossTotIncome %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80C %>
+        </td>
+        <td>
+            <%= f.text_field :section80C %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80CCC %>
+        </td>
+        <td>
+            <%= f.text_field :section80CCC %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80CCD %>
+        </td>
+        <td>
+            <%= f.text_field :section80CCD %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80D %>
+        </td>
+        <td>
+            <%= f.text_field :section80D %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80DD %>
+        </td>
+        <td>
+            <%= f.text_field :section80DD %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80DDB %>
+        </td>
+        <td>
+            <%= f.text_field :section80DDB %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80E %>
+        </td>
+        <td>
+            <%= f.text_field :section80E %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80G %>
+        </td>
+        <td>
+            <%= f.text_field :section80G %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80GG %>
+        </td>
+        <td>
+            <%= f.text_field :section80GG %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80GGA %>
+        </td>
+        <td>
+            <%= f.text_field :section80GGA %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80GGC %>
+        </td>
+        <td>
+            <%= f.text_field :section80GGC %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section80U %>
+        </td>
+        <td>
+            <%= f.text_field :section80U %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totalChapVIADeductions %>
+        </td>
+        <td>
+            <%= f.text_field :totalChapVIADeductions %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totalIncome %>
+        </td>
+        <td>
+            <%= f.text_field :totalIncome %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :netAgriculturalIncome %>
+        </td>
+        <td>
+            <%= f.text_field :netAgriculturalIncome %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :aggregateIncome %>
+        </td>
+        <td>
+            <%= f.text_field :aggregateIncome %>
+        </td>
+    </tr>
+    <tr>
+        <!--
+        <td> <%= f.label :form_id %> </td>
+        <td> <%= f.text_field :form_id %> </td>
+        -->
+        <td>
+            <%= f.submit "Save & Continue" %>
+        </td>
+    </tr>
+    <% end %>
+    </td>
+    <!--
+    <td> <%= link_to 'Show', @income_and_deduction %> </td> |
+    <td> <%= link_to 'Back', income_and_deductions_path %> </td>
+    -->

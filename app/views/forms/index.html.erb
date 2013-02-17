@@ -1,0 +1,72 @@
+<div id="content" style="height: 400px;" >
+<% if @forms.any? %>
+
+<h2>
+    <div class="help notice">
+       Welcome <%= h current_user.login %> ! Following are your Saved Forms
+    </div>
+</h2>
+<table>
+	<thead>
+	<tr>
+		<th style="padding-left: 5px;">FormName</th>
+		<th style="padding-left: 5px;">Formtype</th>
+		<th >Year</th>
+	</tr>
+	</thread>
+    <tbody id="line_items">
+    <% for form in @forms %>
+    <tr class="alt" >
+        <td >
+            <%=h form.formName %>
+        </td>
+        <td>
+            <%=h form.formType %>
+        </td>
+        <td>
+            <%=h form.year %>
+        </td>
+        <!--
+        <td><%=h form.user_id %></td>
+        -->
+		<!--
+        <td style="width: 80px;">		
+        	<a href="/form" class="button small"><img alt="" src="/images/arrow_right_green_16.png" />Show</a>
+            <%= link_to 'Show', form %>
+        </td>
+		-->
+        <td style="width: 80px;">
+            <%= link_to 'Edit', edit_form_path(form)%>
+        </td>
+		<td style="width: 80px;">
+            <%= link_to 'Destroy', form, :confirm => 'Are you sure?', :method => :delete %>
+        </td>
+		<td style="width: 80px;">
+			<%= link_to 'Generate Pdf', :controller => 'pdf_writer', :action => 'index', :id => form.id %>
+		</td>
+		<td style="width: 80px;">
+			<%= link_to 'Generate XML', :controller => 'xml_writer', :action => 'index', :id => form.id %>
+		</td>
+    </tr>
+    <% end %>
+	</tbody>
+</table>
+<% else %>
+<div class="flash notice">
+    <h3>You have not started with your taxes, click below to start </h3>
+</div>
+<% end %>
+<br/>
+</div>
+
+<div id="footer">
+    <div class="left">
+        <a href="/forms/new" class="button small"><img alt="" src="/images/arrow_right_green_16.png" />Start With my taxes</a>
+        <br>
+        </br>
+    </div>
+</div>
+<!--
+<%= link_to 'Add form', new_form_path %>
+-->
+</div>

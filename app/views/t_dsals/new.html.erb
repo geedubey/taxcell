@@ -1,0 +1,121 @@
+<h1>New t_dsal</h1>
+<% form_for(@t_dsal) do |f| %>
+<%= f.error_messages %>
+<table id="cart">
+    <tbody id="line_items">
+    <tr>
+        <td style="width: 20%">
+            <%= f.label :tan %>
+        </td>
+        <td>
+            <%= f.text_field :tan %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :utn %>
+        </td>
+        <td>
+            <%= f.text_field :utn %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :employerOrDeductorOrCollecterName %>
+        </td>
+        <td>
+            <%= f.text_field :employerOrDeductorOrCollecterName %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :addrDetail %>
+        </td>
+        <td>
+            <%= f.text_field :addrDetail %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :cityOrTownOrDistrict %>
+        </td>
+        <td>
+            <%= f.text_field :cityOrTownOrDistrict %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :pinCode %>
+        </td>
+        <td>
+            <%= f.text_field :pinCode %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :stateCode %>
+        </td>
+        <td>
+            <%= f.select :stateCode,
+            Form::INDIAN_STATES,
+            :prompt => "Select State" %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :incChrgSal %>
+        </td>
+        <td>
+            <%= f.text_field :incChrgSal %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :deductUnderChapVIA %>
+        </td>
+        <td>
+            <%= f.text_field :deductUnderChapVIA %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :taxPayIncluSurchEdnCes %>
+        </td>
+        <td>
+            <%= f.text_field :taxPayIncluSurchEdnCes %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totalTDSSal %>
+        </td>
+        <td>
+            <%= f.text_field :totalTDSSal %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :taxPayRefund %>
+        </td>
+        <td>
+            <%= f.text_field :taxPayRefund %>
+        </td>
+    </tr>
+    <!--
+    <tr>
+    <td> <%= f.label :TaxPaidAndRefund_id %> </td>
+    <td> <%= f.text_field :tax_paid_and_refund_id %> </td>
+    </tr>
+    -->
+    <tr>
+        <td>
+            <%= f.submit "Create" %>
+        </td>
+    </tr>
+    <% end %>
+    </td>
+    <td>
+        <%= link_to 'Back', t_dsals_path %>
+    </td>
+</tbody>
+</table>

@@ -1,0 +1,12 @@
+ruby script/generate scaffold User login:string password:string
+ruby script/generate scaffold Form formName:string formType:string year:string user_id:integer
+ruby script/generate scaffold PersonalInfo firstName:string  middleName:string  surNameOrOrgName:string pan:string residenceName:string residenceNo:string status:string localityOrArea:string roadOrStreet:string dob:date cityOrTownOrDistrict:string gender1:string pinCode:integer stateCode1:integer emailAddress:string employerCategory1:integer phoneNo:integer stdCode:integer form_id:integer
+ruby script/generate scaffold FilingInfo desigOfficerWardorCircle:string returnFileSec1:integer returnType1:string origRetFileDate:date receiptNo:string residentialStatus1:string form_id:integer
+ruby script/generate scaffold IncomeAndDeduction incomeFromSal:float famPension:float indInterest:float section80C:float section80CCC:float  section80CCD:float section80D:float  section80DD:float section80DDB:float section80E:float section80G:float section80GG:float section80GGA:float section80GGC:float section80U:float netAgriculturalIncome:float form_id:integer
+ruby script/generate scaffold TaxComputation section89:float section90and91:float taxDueToDelay:float form_id:integer
+ruby script/generate scaffold TaxPaidAndRefund advanceTax:float tds:float selfAssessmentTax:float bankAccountNumber:string ecsRequired:string bankAccountType:string micrCode:string form_id:integer
+ruby script/generate scaffold TDsal tan:string employerOrDeductorOrCollecterName:string addrDetail:string cityOrTownOrDistrict:string pinCode:integer stateCode:string incChrgSal:float deductUnderChapVIA:float taxPayIncluSurchEdnCes:float totalTDSSal:float taxPayRefund:float TaxPaidAndRefund_id:integer
+ruby script/generate scaffold TDsoth tan:string employerOrDeductorOrCollecterName:string addrDetail:string cityOrTownOrDistrict:string pinCode:integer stateCode:string amtPaid:float datePayCred:date totTDSOnAmtPaid:float claimOutOfTotTDSOnAmtPaid:float  TaxPaidAndRefund_id:integer
+ruby script/generate scaffold TaxP nameOfBank:string nameOfBranch:string bsrCode:integer dateDep:date srlNoOfChaln:integer amt:float TaxPaidAndRefund_id:integer
+ruby script/generate scaffold Air code001:float code002:float  code003:float code004:float code005:float code006:float code007:float code008:float taxExmpIntInc:float form_id:integer
+ruby script/generate scaffold Ver assesseeVerName:string fatherName:string place:string date:date identificationNoOfTRP:string nameOfTRP:string reImbFrmGov:float form_id:integer

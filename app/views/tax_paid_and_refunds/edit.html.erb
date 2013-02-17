@@ -1,0 +1,108 @@
+<h1>Tax Paid and Refunds</h1>
+<% form_for(@tax_paid_and_refund) do |f| %>
+
+<%= f.error_messages %>
+
+<table id="cart">
+    <tbody id="line_items">
+    <tr class="">
+        <td style="width: 20%">
+            <%= f.label :advanceTax %>
+        </td>
+        <td>
+            <%= f.text_field :advanceTax %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :tds %>
+        </td>
+        <td>
+            <%= f.text_field :tds %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :selfAssessmentTax %>
+        </td>
+        <td>
+            <%= f.text_field :selfAssessmentTax %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totalTaxesPaid %>
+        </td>
+        <td>
+            <%= f.text_field :totalTaxesPaid %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :balTaxPayable %>
+        </td>
+        <td>
+            <%= f.text_field :balTaxPayable %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :refundDue %>
+        </td>
+        <td>
+            <%= f.text_field :refundDue %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :bankAccountNumber %>
+        </td>
+        <td>
+            <%= f.text_field :bankAccountNumber %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :ecsRequired %>
+        </td>
+        <td>
+            <%= f.select :ecsRequired,
+            Form::ECS_REQD,
+            :propmt => "ECS required" %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :bankAccountType %>
+        </td>
+        <td>
+            <%= f.select :bankAccountType,
+            Form::ACCOUNT_TYPE,
+            :propmt => "Select Account Type" %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :micrCode %>
+        </td>
+        <td>
+            <%= f.text_field :micrCode %>
+        </td>
+    </tr>
+    <!--
+    <tr>
+    <td> <%= f.label :form_id %> </td>
+    <td> <%= f.text_field :form_id %> </td>
+    </tr>
+    -->
+    <tr>
+        <td>
+            <%= f.submit "Save & Continue" %>
+        </td>
+    </tr>
+    <% end %>
+    </td>
+    <!--
+    <td> <%= link_to 'Show', @tax_paid_and_refund %> </td> |
+    <td> <%= link_to 'Back', tax_paid_and_refunds_path %> </td>
+    -->

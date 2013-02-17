@@ -1,0 +1,36 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: filing_infos
+#
+#  id                       :integer(4)      not null, primary key
+#  desigOfficerWardorCircle :string(255)
+#  returnFileSec1           :integer(4)
+#  returnType1              :string(255)
+#  origRetFileDate          :date
+#  receiptNo                :string(255)
+#  residentialStatus1       :string(255)
+#  form_id                  :integer(4)
+#  created_at               :datetime
+#  updated_at               :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  desigOfficerWardorCircle: MyString
+  returnFileSec1: 1
+  returnType1: MyString
+  origRetFileDate: 2009-05-12
+  receiptNo: MyString
+  residentialStatus1: MyString
+  form_id: 1
+
+two:
+  desigOfficerWardorCircle: MyString
+  returnFileSec1: 1
+  returnType1: MyString
+  origRetFileDate: 2009-05-12
+  receiptNo: MyString
+  residentialStatus1: MyString
+  form_id: 1

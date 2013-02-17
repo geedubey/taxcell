@@ -1,0 +1,33 @@
+<h1>Editing form</h1>
+
+<% form_for(@form) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :formName %><br />
+    <%= f.text_field :formName %>
+  </p>
+  <p>
+    <%= f.label :formType %><br />
+    <%= f.select :formType,
+		Form::FORM_TYPES,
+		:prompt => "Select Form Type" %>
+  </p>
+  <p>
+    <%= f.label :year %><br />
+    <%= f.select :year,
+		Form::ASSESMENT_YEARS,
+		:prompt => "Select Assesment Year" %>
+  </p>
+  <!-- Don't let
+  # do not allow users to choose the user ID. it has to be
+  # specified by application. 
+  -->
+  <p>
+    <%= f.submit "Save & Continue" %>
+  </p>
+<% end %>
+<!-- 
+<%= link_to 'Show', @form %> |
+<%= link_to 'Back', forms_path %>
+-->

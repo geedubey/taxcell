@@ -1,0 +1,42 @@
+<% if @tax_ps.any? %>
+<h1>Advance Tax Information</h1>
+
+<table>
+  <tr>
+    <th>Nameofbank</th>
+    <th>Nameofbranch</th>
+	<!--
+    <th>Bsrcode</th>
+    <th>Datedep</th>
+    <th>Srlnoofchaln</th>
+    <th>Amt</th>
+    <th>Taxpaidandrefund</th> 
+	-->
+  </tr>
+
+<% for tax_p in @tax_ps %>
+  <tr>
+    <td><%=h tax_p.nameOfBank %></td>
+    <td><%=h tax_p.nameOfBranch %></td>
+	<!--
+    <td><%=h tax_p.bsrCode %></td>
+    <td><%=h tax_p.dateDep %></td>
+    <td><%=h tax_p.srlNoOfChaln %></td>
+    <td><%=h tax_p.amt %></td>
+    <td><%=h tax_p.tax_paid_and_refund_id %></td> 
+	
+    <td><%= link_to 'Show', tax_p %></td>
+	-->
+    <td><%= link_to 'Edit', edit_tax_p_path(tax_p) %></td>
+    <td><%= link_to 'Destroy', tax_p, :confirm => 'Are you sure, you want to delete this advance tax details ?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added information yet for this form . </p>
+<%end%>
+
+<br />
+
+<%= button_to "Add another Advance Tax details " , {:controller =>'tax_ps' , :action => 'new'}, :method =>:get %>
+<%= button_to "I am done, proceed to next section", {:controller=>'airs' , :action => 'edit' , :id => @form.air.id}, :method => :get %>

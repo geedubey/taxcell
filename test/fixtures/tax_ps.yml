@@ -1,0 +1,36 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: tax_ps
+#
+#  id                  :integer(4)      not null, primary key
+#  nameOfBank          :string(255)
+#  nameOfBranch        :string(255)
+#  bsrCode             :integer(4)
+#  dateDep             :date
+#  srlNoOfChaln        :integer(4)
+#  amt                 :decimal(16, 2)
+#  TaxPaidAndRefund_id :integer(4)
+#  created_at          :datetime
+#  updated_at          :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nameOfBank: MyString
+  nameOfBranch: MyString
+  bsrCode: 1
+  dateDep: 2009-05-12
+  srlNoOfChaln: 1
+  amt: 1.5
+  TaxPaidAndRefund_id: 1
+
+two:
+  nameOfBank: MyString
+  nameOfBranch: MyString
+  bsrCode: 1
+  dateDep: 2009-05-12
+  srlNoOfChaln: 1
+  amt: 1.5
+  TaxPaidAndRefund_id: 1

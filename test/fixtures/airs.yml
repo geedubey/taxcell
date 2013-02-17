@@ -1,0 +1,45 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: airs
+#
+#  id            :integer(4)      not null, primary key
+#  code001       :decimal(16, 2)
+#  code002       :decimal(16, 2)
+#  code003       :decimal(16, 2)
+#  code004       :decimal(16, 2)
+#  code005       :decimal(16, 2)
+#  code006       :decimal(16, 2)
+#  code007       :decimal(16, 2)
+#  code008       :decimal(16, 2)
+#  taxExmpIntInc :integer(10)
+#  form_id       :integer(4)
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code001: 1.5
+  code002: 1.5
+  code003: 1.5
+  code004: 1.5
+  code005: 1.5
+  code006: 1.5
+  code007: 1.5
+  code008: 1.5
+  taxExmpIntInc: 1.5
+  form_id: 1
+
+two:
+  code001: 1.5
+  code002: 1.5
+  code003: 1.5
+  code004: 1.5
+  code005: 1.5
+  code006: 1.5
+  code007: 1.5
+  code008: 1.5
+  taxExmpIntInc: 1.5
+  form_id: 1

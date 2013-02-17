@@ -1,0 +1,27 @@
+# == Schema Information
+# Schema version: 20090522150930
+#
+# Table name: forms
+#
+#  id         :integer(4)      not null, primary key
+#  formName   :string(255)
+#  formType   :string(255)
+#  year       :string(255)
+#  user_id    :integer(4)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  formName: MyString
+  formType: MyString
+  year: MyString
+  user_id: 1
+
+two:
+  formName: MyString
+  formType: MyString
+  year: MyString
+  user_id: 1

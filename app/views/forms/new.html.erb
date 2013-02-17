@@ -1,0 +1,66 @@
+<h1>Create 	New form</h1>
+<% form_for(@form) do |f| %>
+<%= f.error_messages %>
+<table id="cart">
+    <tbody id="line_items">
+        <tr class="">
+            <td style="width: 50px;">
+                <%= f.label :formName %>
+            </td>
+            <td style="width: 250px;">
+                <%= f.text_field :formName %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Tells name of your form to be saved for future references</h4>
+                </div>
+            </td>
+        </tr>
+        <tr class="">
+            <td style="width: 50px;">
+                <%= f.label :formType %>
+            </td>
+            <td style="width: 300px;">
+                <%= f.select :formType,
+                Form::FORM_TYPES,
+                :prompt => "Select Form Type" %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Select form type if you have only salary income you need to select ITR1 if you have income 
+                        from shares you need to select itr2</h4>
+                </div>
+            </td>
+        </tr>
+        <tr class="">
+            <td style="width: 50px;">
+                <%= f.label :year %>
+                <br/>
+            </td>
+            <td style="width: 250px;">
+                <%= f.select :year,
+                Form::ASSESMENT_YEARS,
+                :prompt => "Select Assesment Year" ,  :class => 'title' %>
+            </td>
+            <td>
+                <div class="help notice">
+                    <h4>Current Assessement year is 2009-10 for Financial year 2008-09.</h4>
+                </div>
+            </td>
+        </tr>
+        <!--
+        # do not allow users to choose the user ID. it has to be
+        # specified by application.
+        <p>
+        <%= f.label :user_id %><br />
+        <%= f.text_field :user_id %>
+        </p>
+        -->
+        <tr class="">
+            <td>
+                <p>
+                    <%= f.submit "Create Form" %>
+                </p>
+                <% end %>
+                <%= link_to 'Back', forms_path %>
+            </td>

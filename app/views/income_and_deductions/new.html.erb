@@ -1,0 +1,111 @@
+<h1>New income_and_deduction</h1>
+
+<% form_for(@income_and_deduction) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :incomeFromSal %><br />
+    <%= f.text_field :incomeFromSal %>
+  </p>
+  <p>
+    <%= f.label :famPension %><br />
+    <%= f.text_field :famPension %>
+  </p>
+  <p>
+    <%= f.label :indInterest %><br />
+    <%= f.text_field :indInterest %>
+  </p>
+  
+  
+  <p>
+    <%= f.label :incomeFromOS %><br />
+    <%= f.text_field :incomeFromOS %>
+  </p>
+  
+  <p>
+    <%= f.label :grossTotIncome %><br />
+    <%= f.text_field :grossTotIncome %>
+  </p>
+  
+  <p>
+    <%= f.label :section80C %><br />
+    <%= f.text_field :section80C %>
+  </p>
+  <p>
+    <%= f.label :section80CCC %><br />
+    <%= f.text_field :section80CCC %>
+  </p>
+  <p>
+    <%= f.label :section80CCD %><br />
+    <%= f.text_field :section80CCD %>
+  </p>
+  <p>
+    <%= f.label :section80D %><br />
+    <%= f.text_field :section80D %>
+  </p>
+  <p>
+    <%= f.label :section80DD %><br />
+    <%= f.text_field :section80DD %>
+  </p>
+  <p>
+    <%= f.label :section80DDB %><br />
+    <%= f.text_field :section80DDB %>
+  </p>
+  <p>
+    <%= f.label :section80E %><br />
+    <%= f.text_field :section80E %>
+  </p>
+  <p>
+    <%= f.label :section80G %><br />
+    <%= f.text_field :section80G %>
+  </p>
+  <p>
+    <%= f.label :section80GG %><br />
+    <%= f.text_field :section80GG %>
+  </p>
+  <p>
+    <%= f.label :section80GGA %><br />
+    <%= f.text_field :section80GGA %>
+  </p>
+  <p>
+    <%= f.label :section80GGC %><br />
+    <%= f.text_field :section80GGC %>
+  </p>
+  <p>
+    <%= f.label :section80U %><br />
+    <%= f.text_field :section80U %>
+  </p>
+  <p>
+    <%= f.label :totalChapVIADeductions %><br />
+    <%= f.text_field :totalChapVIADeductions %>
+  </p>
+  
+  <p>
+    <%= f.label :totalIncome %><br />
+    <%= f.text_field :totalIncome %>
+  </p>
+  
+  <p>
+    <%= f.label :netAgriculturalIncome %><br />
+    <%= f.text_field :netAgriculturalIncome %>
+  </p>
+  
+  <p>
+    <%= f.label :aggregateIncome %><br />
+    <%= f.text_field :aggregateIncome %>
+  </p>
+  
+  
+  
+<!--
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+-->
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', income_and_deductions_path %>

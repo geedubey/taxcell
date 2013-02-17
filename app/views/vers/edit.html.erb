@@ -1,0 +1,51 @@
+<h1>Editing ver</h1>
+
+<% form_for(@ver) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :assesseeVerName %><br />
+    <%= f.text_field :assesseeVerName %>
+  </p>
+  <p>
+    <%= f.label :fatherName %><br />
+    <%= f.text_field :fatherName %>
+  </p>
+  <p>
+    <%= f.label :place %><br />
+    <%= f.text_field :place %>
+  </p>
+  
+  <p>
+    <%= f.label :date %><br />
+    <%=	 f.date_select :date, 
+		:order => [:day, :month, :year],
+		:start_year => 2008 %>
+  </p>
+    
+  <p>
+    <%= f.label :identificationNoOfTRP %><br />
+    <%= f.text_field :identificationNoOfTRP %>
+  </p>
+  <p>
+    <%= f.label :nameOfTRP %><br />
+    <%= f.text_field :nameOfTRP %>
+  </p>
+  <p>
+    <%= f.label :reImbFrmGov %><br />
+    <%= f.text_field :reImbFrmGov %>
+  </p>
+<!--  
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+-->
+  <p>
+    <%= f.submit "Save & Continue" %>
+  </p>
+<% end %>
+<!--
+<%= link_to 'Show', @ver %> |
+<%= link_to 'Back', vers_path %>
+-->

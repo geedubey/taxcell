@@ -1,0 +1,65 @@
+<h1>Editing t_dsoth</h1>
+
+<% form_for(@t_dsoth) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tan %><br />
+    <%= f.text_field :tan %>
+  </p>
+  <p>
+    <%= f.label :utn %><br />
+    <%= f.text_field :utn %>
+  </p>
+  <p>
+    <%= f.label :employerOrDeductorOrCollecterName %><br />
+    <%= f.text_field :employerOrDeductorOrCollecterName %>
+  </p>
+  <p>
+    <%= f.label :addrDetail %><br />
+    <%= f.text_field :addrDetail %>
+  </p>
+  <p>
+    <%= f.label :cityOrTownOrDistrict %><br />
+    <%= f.text_field :cityOrTownOrDistrict %>
+  </p>
+  <p>
+    <%= f.label :pinCode %><br />
+    <%= f.text_field :pinCode %>
+  </p>
+  <p>
+    <%= f.label :stateCode %><br />
+    <%= f.select :stateCode, 	    
+		Form::INDIAN_STATES,
+		:prompt => "Select State" %>
+  </p>
+  <p>
+    <%= f.label :amtPaid %><br />
+    <%= f.text_field :amtPaid %>
+  </p>
+  <p>
+    <%= f.label :datePayCred %><br />
+    <%= f.date_select :datePayCred ,
+		:order => [:day, :month, :year] %>
+  </p>
+  <p>
+    <%= f.label :totTDSOnAmtPaid %><br />
+    <%= f.text_field :totTDSOnAmtPaid %>
+  </p>
+  <p>
+    <%= f.label :claimOutOfTotTDSOnAmtPaid %><br />
+    <%= f.text_field :claimOutOfTotTDSOnAmtPaid %>
+  </p>
+  <!-- 
+  <p>
+    <%= f.label :TaxPaidAndRefund_id %><br />
+    <%= f.text_field :tax_paid_and_refund_id %>
+  </p>
+  -->
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @t_dsoth %> |
+<%= link_to 'Back', t_dsoths_path %>

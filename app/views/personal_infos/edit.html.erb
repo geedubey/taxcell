@@ -1,0 +1,268 @@
+<h1>Enter your Personal Details for Tax purposes</h1>
+<% form_for(@personal_info) do |f| %>
+<%= f.error_messages %>
+<table id="cart">
+    <tbody id="line_items">
+    <tr class="">
+        <td style="width: 20%">
+            <%= f.label :firstName , "First Name *" %>
+        </td>
+        <td>
+            <%= f.text_field :firstName %>
+        </td>
+        <td style="width: 40%">
+            <div class="help notice">
+                <h4>Your Legal First Name as per Pan card </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :middleName , "Middle Name" %>
+        </td>
+        <td>
+            <%= f.text_field :middleName %>
+        </td>
+        <td>
+            <div class="help notice">
+                <h4>Your Legal Middle Name (if any) as per Pan card</h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :surNameOrOrgName , " SurName or Last Name *" %>
+        </td>
+        <td>
+            <%= f.text_field :surNameOrOrgName %>
+        </td>
+        <td>
+            <div class="help notice">
+                <h4>Your Last Name (if any) as per Pan card</h4>
+            </div>
+        </td>
+    </tr>
+	<tr class="">
+        <td>
+            <%= f.label :dob ,"Date Of Birth *" %>
+        </td>
+        <td>
+            <%= f.date_select :dob,
+            :order => [:day, :month, :year],
+            :start_year => 1900 %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter Date of Birth </h4>
+            </div>
+        </td>
+    </tr>
+	<tr class="">
+        <td>
+            <%= f.label :gender1 , "Gender *" %>
+        </td>
+        <td>
+            <%= f.select :gender1 ,
+            Form::SEX,
+            :propmt => "Select Sex" %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter your Gender </h4>
+            </div>
+        </td>
+    </tr>
+	<tr class="">
+        <td>
+            <%= f.label :pan ,"PAN card Number *" %>
+        </td>
+        <td>
+            <%= f.text_field :pan %>
+        </td>
+        <td>
+            <div class="help notice">
+                <h4>Enter your Pan card Number </h4>
+            </div>
+        </td>
+    </tr>
+	<tr class="">
+        <td>
+            <%= f.label :status , "Status *" %>
+        </td>
+        <td>
+            <%= f.select :status,
+            Form::STATUS,
+            :propmt => "Select Status" %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>How you are filing tax as a individual or a HUF(Hindu Undivided family)? </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :employerCategory1 , " Employer Category *"%>
+        </td>
+        <td>
+            <%= f.select :employerCategory1,
+            Form::EMPLOYER,
+            :prompt => "Select Employer" %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4> Select your employer Category </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :residenceNo , "Residence No *" %>
+        </td>
+        <td>
+            <%= f.text_field :residenceNo %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter flat no, door no </h4>
+            </div>
+        </td>
+    </tr>
+	<tr class="">
+        <td>
+            <%= f.label :residenceName , "Residence Name" %>
+        </td>
+        <td>
+            <%= f.text_field :residenceName %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter name of house,society,complex etc </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :localityOrArea ,"Locality or Area *" %>
+        </td>
+        <td>
+            <%= f.text_field :localityOrArea %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter name of Locality </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :roadOrStreet , " Road or Street" %>
+        </td>
+        <td>
+            <%= f.text_field :roadOrStreet %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter Road or Street of your address </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :cityOrTownOrDistrict , " City Town or District *"%>
+        </td>
+        <td>
+            <%= f.text_field :cityOrTownOrDistrict %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter City Town or District </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :pinCode ,"PIN Code *" %>
+        </td>
+        <td>
+            <%= f.text_field :pinCode %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Enter your Area PIN code </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :stateCode1 ," Select your State *"%>
+        </td>
+        <td>
+            <%= f.select :stateCode1,
+            Form::INDIAN_STATES,
+            :prompt => "Select state" %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4>Select your state from the list </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :emailAddress , "Email address *"%>
+        </td>
+        <td>
+            <%= f.text_field :emailAddress %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4> Enter your email address leave this field blank if you dont have one </h4>
+            </div>
+        </td>
+    </tr>
+	<tr class="">
+        <td>
+            <%= f.label :phoneNo , "Phone Number" %>
+        </td>
+        <td>
+            <%= f.text_field :phoneNo %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4> Enter your phone number (Landline or Mobile) </h4>
+            </div>
+        </td>
+    </tr>
+    <tr class="">
+        <td>
+            <%= f.label :stdCode , "STD CODE" %>
+        </td>
+        <td>
+            <%= f.text_field :stdCode %>
+        </td>
+		<td>
+            <div class="help notice">
+                <h4> Enter your STD CODE (Put 91 if moble number is mentioned) </h4>
+            </div>
+        </td>
+    </tr>
+	
+    
+    <!--
+    <tr class="">
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+    </tr>
+    -->
+    <tr class="">
+        <td colspan=2>
+            <%= f.submit "Save & Continue" %>
+            <!--
+            <%= link_to 'Show', @personal_info %>|<%= link_to 'Back', personal_infos_path %>
+            -->
+        </td>
+    </tr>
+    <% end %>
+</table>
+</tbody>

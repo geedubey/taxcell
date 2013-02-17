@@ -1,0 +1,57 @@
+<% if @income_and_deductions.any? %>
+<h1>Listing income_and_deductions</h1>
+
+<table>
+  <tr>
+    <th>Incomefromsal</th>
+    <th>Fampension</th>
+    <th>Indinterest</th>
+    <th>Section80c</th>
+    <th>Section80ccc</th>
+    <th>Section80ccd</th>
+    <th>Section80d</th>
+    <th>Section80dd</th>
+    <th>Section80ddb</th>
+    <th>Section80e</th>
+    <th>Section80g</th>
+    <th>Section80gg</th>
+    <th>Section80gga</th>
+    <th>Section80ggc</th>
+    <th>Section80u</th>
+    <th>Netagriculturalincome</th>
+<!--    <th>Form</th>  -->
+  </tr>
+
+<% for income_and_deduction in @income_and_deductions %>
+  <tr>
+    <td><%=h income_and_deduction.incomeFromSal %></td>
+    <td><%=h income_and_deduction.famPension %></td>
+    <td><%=h income_and_deduction.indInterest %></td>
+    <td><%=h income_and_deduction.section80C %></td>
+    <td><%=h income_and_deduction.section80CCC %></td>
+    <td><%=h income_and_deduction.section80CCD %></td>
+    <td><%=h income_and_deduction.section80D %></td>
+    <td><%=h income_and_deduction.section80DD %></td>
+    <td><%=h income_and_deduction.section80DDB %></td>
+    <td><%=h income_and_deduction.section80E %></td>
+    <td><%=h income_and_deduction.section80G %></td>
+    <td><%=h income_and_deduction.section80GG %></td>
+    <td><%=h income_and_deduction.section80GGA %></td>
+    <td><%=h income_and_deduction.section80GGC %></td>
+    <td><%=h income_and_deduction.section80U %></td>
+    <td><%=h income_and_deduction.netAgriculturalIncome %></td>
+<!--    <td><%=h income_and_deduction.form_id %></td> -->
+    <td><%= link_to 'Show', income_and_deduction %></td>
+    <td><%= link_to 'Edit', edit_income_and_deduction_path(income_and_deduction) %></td>
+    <td><%= link_to 'Destroy', income_and_deduction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added income and deduction information yet for this form . </p>
+<%end%>
+
+<br />
+
+<%= link_to 'Add now', new_income_and_deduction_path %>
+

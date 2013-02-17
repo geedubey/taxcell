@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TaxCell - Your Reliable Tax Patner</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link href="/stylesheets/compiled/screen.css?1241320841" media="screen" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <table id="cart">
+            <tbody id="line_items">
+                <tr class="">
+                    <td>
+                    </td>
+                    <td>
+                        <% if current_user %>
+                        <div class="newx notice">
+                            Step by Step method to make File your income tax return, Just answer the question asked and we 
+                            calculate the tax and generate the ITR forms for you.
+                        </div>
+                        <h3><%= link_to 'Start Me Now', :controller => 'forms', :action => 'index' %>
+                        </h3>
+                        <%else %>
+                        <h3><%= link_to "It's simple", :controller => '' %>
+                        </h3>
+                        <div class="newx notice">
+                            interface is simple, just answer the questions asked and we garuntee 100% accuracy
+                        </div>
+                        <%end %>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td>
+                    </td>
+                    <td>
+                        <% if current_user %>
+                        <div class="newx notice">
+                            Existing User can veiw their saved forms you can also print your ITR here
+                        </div>
+                        <h3><%= link_to 'View or Print Saved From', :controller => 'forms', :action => 'index' %>
+                        </h3>
+                        <%else %>
+                        <h3><%= link_to "It's safe", :controller => '' %>
+                        </h3>
+                        <div class="newx notice">
+                            We are SSL 128 Bit secure, your information is safe due to encrypted trasmission of data
+                        </div>
+                        <%end %>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td>
+                    </td>
+                    <td>
+                        <% if current_user %>
+                        <div class="newx notice">
+                            If you are facing any problem while filing the taxes call us. We will be happy to help you
+                        </div>
+                        <h3><%= link_to 'Get Support', :controller => '' %>
+                        </h3>
+                        <%else %>
+                        <h3><%= link_to "It's Free", :controller => '' %>
+                        </h3>
+                        <div class="newx notice">
+                            It's Free, We don't charge you anything at any stage.
+                        </div>
+                        <%end %>
+                    </td>
+                </tr>
+                <tr class="">
+                    <td>
+                    </td>
+                    <td>
+                        <% if current_user %>
+                        <div class="newx notice">
+                            View our Forms to know about frequently asked question and best practise 
+                        </div>
+                        <h3><%= link_to 'View Tax Blog or Forums', :controller => '' %>
+                        </h3>
+                        <%else %>
+                        <h3><%= link_to "Free Support", :controller => '' %>
+                        </h3>
+                        <div class="newx notice">
+                            Our representative help you when you are struck
+                        </div>
+                    </td>
+                </tr>
+                <%end %>
+                <tr id="none">
+                    <td colspan="5">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="subtotal">
+        </div>
+        <p>
+            <div class="links" style="padding-left: 250px;">
+        </p>
+        <p id="clear_cart_link">
+        </p>
+        </form>
+    </div>
+    <% if current_user %>
+    <%else %>
+    <div id="footer">
+        <div class="left">
+            <p>
+                <a href="/signup" class="button large"><img alt="" src="/images/add.png" />Register Now  !</a>
+            </p>
+        </div>
+        <div class="right">
+        <ul id="language-bar">
+        <a href="/login" class="button large"><img alt="" src="/images/arrow_right_green.png" />Already a user  !</a>
+    </div>
+    </ul><%end %>
+</body>
+</html>

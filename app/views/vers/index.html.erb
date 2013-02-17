@@ -1,0 +1,38 @@
+<% if @vers.any? %>
+
+<h1>Listing vers</h1>
+
+<table>
+  <tr>
+    <th>Assesseevername</th>
+    <th>Fathername</th>
+    <th>Place</th>
+    <th>Date</th>
+    <th>Identificationnooftrp</th>
+    <th>Nameoftrp</th>
+    <th>Reimbfrmgov</th>
+<!--    <th>Form</th> -->
+  </tr>
+
+<% for ver in @vers %>
+  <tr>
+    <td><%=h ver.assesseeVerName %></td>
+    <td><%=h ver.fatherName %></td>
+    <td><%=h ver.place %></td>
+    <td><%=h ver.date %></td>
+    <td><%=h ver.identificationNoOfTRP %></td>
+    <td><%=h ver.nameOfTRP %></td>
+    <td><%=h ver.reImbFrmGov %></td>
+<!--    <td><%=h ver.form_id %></td> -->
+    <td><%= link_to 'Show', ver %></td>
+    <td><%= link_to 'Edit', edit_ver_path(ver) %></td>
+    <td><%= link_to 'Destroy', ver, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% else %>
+<p>You haven't added Ver information yet for this form . </p>
+<%end%>
+<br />
+
+<%= link_to 'New ver', new_ver_path %>

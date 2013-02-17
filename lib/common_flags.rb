@@ -1,0 +1,5 @@
+
+#COMMON FLAG TO TURN ON THE DEBUGGING 
+$IsDebug=true
+
+

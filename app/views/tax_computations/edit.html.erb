@@ -1,0 +1,136 @@
+<h1>Tax Computation</h1>
+<% form_for(@tax_computation) do |f| %>
+
+<%= f.error_messages %>
+
+<table id="cart">
+    <tbody id="line_items">
+    <tr class="">
+        <td style="width: 20%">
+            <%= f.label :taxOnAggregateInc %>
+        </td>
+        <td>
+            <%= f.text_field :taxOnAggregateInc %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :rebateOnAgriInc %>
+        </td>
+        <td>
+            <%= f.text_field :rebateOnAgriInc %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totalTaxPayable %>
+        </td>
+        <td>
+            <%= f.text_field :totalTaxPayable %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :surchargeOnTaxPayable %>
+        </td>
+        <td>
+            <%= f.text_field :surchargeOnTaxPayable %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :educationCess %>
+        </td>
+        <td>
+            <%= f.text_field :educationCess %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :grossTaxLiability %>
+        </td>
+        <td>
+            <%= f.text_field :grossTaxLiability %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section89 %>
+        </td>
+        <td>
+            <%= f.text_field :section89 %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :section90and91 %>
+        </td>
+        <td>
+            <%= f.text_field :section90and91 %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :netTaxLiability %>
+        </td>
+        <td>
+            <%= f.text_field :netTaxLiability %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :intrstPayUs234A %>
+        </td>
+        <td>
+            <%= f.text_field :intrstPayUs234A %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :intrstPayUs234B %>
+        </td>
+        <td>
+            <%= f.text_field :intrstPayUs234B %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :intrstPayUs234C %>
+        </td>
+        <td>
+            <%= f.text_field :intrstPayUs234C %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totalIntrstPay %>
+        </td>
+        <td>
+            <%= f.text_field :totalIntrstPay %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%= f.label :totTaxPlusIntrstPay %>
+        </td>
+        <td>
+            <%= f.text_field :totTaxPlusIntrstPay %>
+        </td>
+    </tr>
+    <!--
+    <tr>
+    <td> <%= f.label :form_id %> </td>
+    <td> <%= f.text_field :form_id %> </td>
+    </tr>
+    -->
+    <tr>
+        <td>
+            <%= f.submit "Save & Continue" %>
+        </td>
+    </tr>
+    <% end %>
+    </td>
+    <!--
+    <td> <%= link_to 'Show', @tax_computation %> </td> |
+    <td> <%= link_to 'Back', tax_computations_path %> </td>
+    -->

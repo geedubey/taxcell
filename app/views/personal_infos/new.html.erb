@@ -1,0 +1,102 @@
+<h1>New personal_info</h1>
+
+<% form_for(@personal_info) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :firstName %><br />
+    <%= f.text_field :firstName %>
+  </p>
+  <p>
+    <%= f.label :middleName %><br />
+    <%= f.text_field :middleName %>
+  </p>
+  <p>
+    <%= f.label :surNameOrOrgName %><br />
+    <%= f.text_field :surNameOrOrgName %>
+  </p>
+  <p>
+    <%= f.label :pan %><br />
+    <%= f.text_field :pan %>
+  </p>
+  <p>
+    <%= f.label :residenceName %><br />
+    <%= f.text_field :residenceName %>
+  </p>
+  <p>
+    <%= f.label :residenceNo %><br />
+    <%= f.text_field :residenceNo %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.select :status,
+			Form::STATUS,
+				:propmt => "Select status"		
+		%>
+  </p>
+  <p>
+    <%= f.label :localityOrArea %><br />
+    <%= f.text_field :localityOrArea %>
+  </p>
+  <p>
+    <%= f.label :roadOrStreet %><br />
+    <%= f.text_field :roadOrStreet %>
+  </p>
+  <p>
+    <%= f.label :dob %><br />
+    <%= f.date_select :dob, 
+		:order => [:day, :month, :year],
+		:start_year => 1900 %>
+  </p>
+  <p>
+    <%= f.label :cityOrTownOrDistrict %><br />
+    <%= f.text_field :cityOrTownOrDistrict %>
+  </p>
+  <p>
+    <%= f.label :gender1 %><br />
+    <%= f.select :gender1,
+		Form::SEX,
+		:propmt => "Select Sex" %>
+  </p>
+  <p>
+    <%= f.label :pinCode %><br />
+    <%= f.text_field :pinCode %>
+  </p>
+  <p>
+    <%= f.label :stateCode1 %><br />
+    <%= f.select :stateCode1, 	    
+		Form::INDIAN_STATES,
+		:prompt => "Select State" %>
+  </p>
+  <p>
+    <%= f.label :emailAddress %><br />
+    <%= f.text_field :emailAddress %>
+  </p>
+  <p>
+    <%= f.label :employerCategory1 %><br />
+    <%= f.select :employerCategory1,
+		Form::EMPLOYER,
+		:prompt => "Select Employer" %>
+  </p>
+  <p>
+    <%= f.label :phoneNo %><br />
+    <%= f.text_field :phoneNo %>
+  </p>
+  <p>
+    <%= f.label :stdCode %><br />
+    <%= f.text_field :stdCode %>
+  </p>
+  
+<!--
+  <p>
+    <%= f.label :form_id %><br />
+    <%= f.text_field :form_id %>
+  </p>
+  
+-->
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', personal_infos_path %>
