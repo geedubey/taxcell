@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) 2009, Income Tax department.  Property of Income Tax department, Govt. of India -->
+<!-- Created on: 17-Feb-2009 -->
+<!-- Version 1.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://incometaxindiaefiling.gov.in/" xmlns:ITRForm="http://incometaxindiaefiling.gov.in/Corpmaster" xmlns:ITR8FORM="http://incometaxindiaefiling.gov.in/ITR8" targetNamespace="http://incometaxindiaefiling.gov.in/ITR8" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/Corpmaster" schemaLocation="./Corpmaster09.xsd"/>
+	<xs:element name="ITR8">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ITRForm:CreationInfo"/>
+				<xs:element ref="ITRForm:Form_ITR8"/>
+				<xs:element ref="ITRForm:PartA_GEN1"/>
+				<xs:element name="LiableSec44AAflg" default="N" id="itr8sec1">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="1"/>
+							<xs:enumeration value="N"/>
+							<xs:enumeration value="Y"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LiableSec44ABflg" default="N" id="itr8sec2">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="1"/>
+							<xs:enumeration value="N"/>
+							<xs:enumeration value="Y"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="ITRForm:AuditInfo" minOccurs="0"/>
+				<xs:element ref="ITRForm:PartCAnd8B"/>
+				<xs:element ref="ITRForm:ScheduleBA" minOccurs="0"/>
+				<xs:element ref="ITRForm:Verification"/>
+				<xs:element ref="ITRForm:ScheduleFBI"/>
+				<xs:element ref="ITRForm:ScheduleFB"/>
+				<xs:element ref="ITRForm:ScheduleFBT" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

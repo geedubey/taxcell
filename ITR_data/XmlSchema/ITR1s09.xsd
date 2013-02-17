@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ITR-1 Schema definition -->
+<!-- (c) 2009, Income Tax department.  Property of Income Tax department, Govt. of India -->
+<!-- Created on: 17-Feb-2009 -->
+<!-- Version 1.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://incometaxindiaefiling.gov.in/" xmlns:ITRForm="http://incometaxindiaefiling.gov.in/master" xmlns:ITR1FORM="http://incometaxindiaefiling.gov.in/ITR1" targetNamespace="http://incometaxindiaefiling.gov.in/ITR1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/master" schemaLocation="./master09.xsd"/>
+	<!--	 ITR-1 Form description starts here -->
+	<xs:element name="ITR1" id="ITR-1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ITRForm:CreationInfo"/>
+				<xs:element ref="ITRForm:Form_ITR1" id="Heading"/>
+				<xs:element ref="ITRForm:PersonalInfo" id="Section1"/>
+				<xs:element ref="ITRForm:FilingStatus" id="Section2"/>
+				<xs:element ref="ITRForm:IncomeDeductions" id="Section3"/>
+				<xs:element ref="ITRForm:TaxComputation" id="Section4"/>
+				<xs:element ref="ITRForm:TaxPaid" id="Section5"/>
+				<xs:element ref="ITRForm:Refund" id="Section6" minOccurs="0"/>
+				<xs:element ref="ITRForm:TDSonSalaries" id="Section21" minOccurs="0"/>
+				<xs:element ref="ITRForm:TDSonOthThanSals" id="Section22" minOccurs="0"/>
+				<xs:element ref="ITRForm:TaxPayments" id="Section23" minOccurs="0"/>
+				<xs:element ref="ITRForm:AIRInfo" id="Section24" minOccurs="0"/>
+				<xs:element name="TaxExmpIntInc" default="0" id="Section25" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:unsignedLong">
+							<xs:totalDigits value="15"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element ref="ITRForm:Verification" id="Section26"/>
+				<xs:element ref="ITRForm:TaxReturnPreparer" id="Section27" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- ITR-1 Form description ends here -->
+</xs:schema>

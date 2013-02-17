@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by pradeep (Hewlett Packard Globalsoft Ltd.) -->
+<!-- (c) 2009, Income Tax department.  Property of Income Tax department, Govt. of India -->
+<!-- Created on: 17-Feb-2009 -->
+<!-- Version 1.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://incometaxindiaefiling.gov.in/" xmlns:ITRForm="http://incometaxindiaefiling.gov.in/Corpmaster" xmlns:ITR6FORM="http://incometaxindiaefiling.gov.in/ITR6" targetNamespace="http://incometaxindiaefiling.gov.in/ITR6" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/Corpmaster" schemaLocation="./Corpmaster09.xsd"/>
+	<xs:element name="ITR6">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ITRForm:CreationInfo"/>
+				<xs:element ref="ITRForm:Form_ITR6"/>
+				<xs:element ref="ITRForm:PartA_GEN1"/>
+				<xs:element ref="ITRForm:PartA_GEN2For6"/>
+				<xs:element ref="ITRForm:PARTA_BSFor6"/>
+				<xs:element ref="ITRForm:PARTA_PLFor6"/>
+				<xs:element ref="ITRForm:PARTA_OI" minOccurs="0"/>
+				<xs:element ref="ITRForm:PARTA_QD" minOccurs="0"/>
+				<xs:element ref="ITRForm:PartB-TI"/>
+				<xs:element ref="ITRForm:PartB_TTI"/>
+				<xs:element ref="ITRForm:PartCAnd8B" minOccurs="0"/>
+				<xs:element ref="ITRForm:Verification"/>
+				<xs:element ref="ITRForm:ScheduleBA" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleHP" minOccurs="0"/>
+				<xs:element ref="ITRForm:CorpScheduleBP"/>
+				<xs:element ref="ITRForm:ScheduleDPM" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleDOA" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleDEP" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleDCG" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleESR" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleCG" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleOS" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleCYLA" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleBFLA" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleCFL" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule10A" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule10AA" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule10B" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule10BA" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule80G" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule80_IA" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule80_IB" minOccurs="0"/>
+				<xs:element ref="ITRForm:Schedule80_IC" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleVIA" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleSTTC" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleSI" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleEI" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleMAT"/>
+				<xs:element ref="ITRForm:ScheduleMATC"/>
+				<xs:element ref="ITRForm:ScheduleDDT" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleFBI" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleFB" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleIT" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleTDS2" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleTCS" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleFBT" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleDDTP" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

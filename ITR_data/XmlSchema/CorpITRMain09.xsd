@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Imran (Hewlett Packard Globalsoft Ltd.) -->
+<!-- (c) 2009, Income Tax department.  Property of Income Tax department, Govt. of India -->
+<!-- Created on: 17-Feb-2009 -->
+<!-- Version 1.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ITR5FORM="http://incometaxindiaefiling.gov.in/ITR5" xmlns:ITR6FORM="http://incometaxindiaefiling.gov.in/ITR6" xmlns:ITR8FORM="http://incometaxindiaefiling.gov.in/ITR8" xmlns:ITRETURN="http://incometaxindiaefiling.gov.in/main" targetNamespace="http://incometaxindiaefiling.gov.in/main" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/ITR5" schemaLocation="ITR5s09.xsd"/>
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/ITR6" schemaLocation="ITR6s09.xsd"/>
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/ITR8" schemaLocation="ITR8s09.xsd"/>
+	<xs:element name="ITR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ITR5FORM:ITR5" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ITR6FORM:ITR6" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ITR8FORM:ITR8" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

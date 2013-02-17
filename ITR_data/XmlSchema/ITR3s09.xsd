@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ITR-3 Forms Schema definitions -->
+<!-- (c) 2008, Income Tax department.  Property of Income Tax department, Govt. of India -->
+<!-- Created on: 17-Feb-2009 -->
+<!-- Version 1.0 -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://incometaxindiaefiling.gov.in/" xmlns:ITRForm="http://incometaxindiaefiling.gov.in/master" xmlns:ITR3FORM="http://incometaxindiaefiling.gov.in/ITR3" targetNamespace="http://incometaxindiaefiling.gov.in/ITR3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://incometaxindiaefiling.gov.in/master" schemaLocation="./master09.xsd"/>
+	<xs:element name="ITR3">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ITRForm:CreationInfo"/>
+				<xs:element ref="ITRForm:Form_ITR3"/>
+				<xs:element ref="ITRForm:PartA_GEN1"/>
+				<xs:element ref="ITRForm:PartB-TI"/>
+				<xs:element ref="ITRForm:PartB_TTI"/>
+				<xs:element ref="ITRForm:Verification"/>
+				<xs:element ref="ITRForm:TaxReturnPreparer" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleS" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleHP" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleIF"/>
+				<xs:element ref="ITRForm:ScheduleBPA"/>
+				<xs:element ref="ITRForm:ScheduleCGFor23" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Capital Gains</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="ITRForm:ScheduleOS" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Income from other sources</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="ITRForm:ScheduleCYLA">
+					<xs:annotation>
+						<xs:documentation>Details of Income after Set of of current years losses.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="ITRForm:ScheduleBFLA"/>
+				<xs:element ref="ITRForm:ScheduleCFL" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleVIA" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleSPI" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleSI" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleEI" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleAIR" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleIT" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleTDS1" minOccurs="0"/>
+				<xs:element ref="ITRForm:ScheduleTDS2" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

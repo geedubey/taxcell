@@ -1,0 +1,23 @@
+<head>
+    <link href="/stylesheets/compiled/screen.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<div id="header" class="container">
+    <!-- <%= link_to "Welcome", root_path %> -->
+    <ul id="nav-bar">    	
+        <div id="login-bar">
+            <li>
+                <% if current_user %>
+                Logged in as : <%=h current_user.login %> 
+				<%= link_to "My Forms", "/forms" %>
+				<%= link_to "Log out", logout_path %>
+                <% else %>
+                <%= link_to "Log in", login_path %>
+                <% end %>
+            </li>
+        </div>
+		<li>
+            <% link_to "Home", "/" %>
+            <a href="/">Home</a>
+        </li>
+    </ul>
+</div>
