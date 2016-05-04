@@ -108,7 +108,7 @@ end
 
 #Exception notifier mails
 #ExceptionNotifier.exception_recipients =
-#%w(gangadhardubey@gmail.com sh.vipin@gmail.com mail.dpant@gmail.com)
+#%w(noone@noone.com)
 
 #date Format
 ActiveSupport::CoreExtensions::Date::Conversions::DATE_FORMATS.merge!(
